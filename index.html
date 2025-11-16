@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blockchain Simulator - Versi Final</title>
+  <link rel="stylesheet" href="style4.css" />
+</head>
+
+<body>
+
+  <div class="navbar">
+    <button id="tab-home" class="active">Home</button>
+    <button id="tab-about">About Me</button>
+    <button id="tab-hash">Hash</button>
+    <button id="tab-block">Block</button>
+    <button id="tab-chain">Block Chain</button>
+    <button id="tab-ecc">ECC Signature</button>
+    <button id="tab-consensus">Konsensus</button>
+  </div>
+
+  <div id="page-home" class="page active" style="padding-bottom:60px;">
+
+  <div style="
+      background: linear-gradient(135deg, #eef8ff, #ffffff);
+      padding:55px 30px;
+      border-radius:24px;
+      box-shadow:0 12px 28px rgba(0,0,0,0.10);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+  ">
+
+    <div style="
+        position:absolute;
+        width:210px;
+        height:210px;
+        background:#d6ebff;
+        top:-70px;
+        left:-50px;
+        border-radius:50%;
+        opacity:0.6;
+        filter:blur(50px);
+    "></div>
+
+    <div style="
+        position:absolute;
+        width:180px;
+        height:180px;
+        background:#fff7d6;
+        bottom:-60px;
+        right:-40px;
+        border-radius:50%;
+        opacity:0.55;
+        filter:blur(55px);
+    "></div>
+
+    <h2 style="
+        margin:0;
+        font-size:32px;
+        font-weight:700;
+        letter-spacing:-0.5px;
+        color:#22323e;">
+      Belajar Blockchain Secara Interaktif
+    </h2>
+
+    <p style="
+        margin-top:12px;
+        color:#55626b;
+        font-size:14px;
+        letter-spacing:0.3px;
+    ">
+      Platform edukasi modern untuk memahami Blockchain melalui simulasi visual.
+    </p>
+
+    <div id="datetime" style="
+        margin-top:14px;
+        color:#8a99a5;
+        font-size:13px;
+    "></div>
+
+  </div>
+
+  <div style="
+      margin-top:32px;
+      padding:25px;
+      background:rgba(255,255,255,0.6);
+      backdrop-filter:blur(12px);
+      border-radius:20px;
+      border:1px solid rgba(230,230,230,0.6);
+      box-shadow:0 10px 24px rgba(0,0,0,0.06);
+  ">
+    <h3 style="margin-top:0; font-size:20px; font-weight:600; color:#253642;">
+      🧭 Petunjuk Navigasi
+    </h3>
+
+    <p style="color:#4a5964; line-height:1.6; margin-bottom:15px;">
+      Gunakan menu navigasi untuk melakukan eksplorasi fitur-fitur Blockchain:
+    </p>
+
+    <ul style="
+        color:#425058;
+        line-height:1.7;
+        padding-left:18px;
+        font-size:14px;
+    ">
+      <li>🏡 <b>Home</b> — Halaman utama & pengenalan</li>
+      <li>👤 <b>About Me</b> — Profil pembuat & kontak</li>
+      <li>🔐 <b>Hash</b> — Buat hash SHA-256 secara realtime</li>
+      <li>🧱 <b>Block</b> — Simulasi pembuatan satu block</li>
+      <li>⛓️ <b>Block Chain</b> — Mining block berantai</li>
+      <li>✒️ <b>ECC Signature</b> — Tanda tangan digital ECC</li>
+      <li>🤝 <b>Konsensus</b> — Simulasi sinkronisasi antar node</li>
+    </ul>
+  </div>
+
+  <div style="
+      margin-top:32px;
+      padding:25px;
+      background:rgba(255,255,255,0.65);
+      border-radius:20px;
+      border:1px solid rgba(230,230,230,0.6);
+      backdrop-filter:blur(12px);
+      box-shadow:0 10px 24px rgba(0,0,0,0.06);
+  ">
+    <h3 style="margin-top:0; font-size:20px; font-weight:600; color:#253642;">
+      📘 Dasar Teori Blockchain
+    </h3>
+
+    <p style="color:#4a5964; line-height:1.6;">
+      Blockchain bekerja dengan menggabungkan teknik-teknik keamanan modern, antara lain:
+    </p>
+
+    <ul style="
+        color:#425058;
+        line-height:1.8;
+        padding-left:18px;
+        font-size:14px;
+    ">
+      <li><b>SHA-256</b> — Fungsi hash yang menghasilkan identitas digital unik</li>
+      <li><b>Kriptografi ECC</b> — Enkripsi efisien & aman untuk tanda tangan digital</li>
+      <li><b>Digital Signature</b> — Pembuktian keaslian pengirim dan integritas data</li>
+      <li><b>Consensus</b> — Semua node menyetujui data yang sama secara terdistribusi</li>
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="page-about" class="page" style="padding-bottom:40px;">
+
+  <div style="
+    background: linear-gradient(135deg, #6981d2, #f5fff9);
+    padding: 45px 30px;
+    border-radius: 22px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    border: 1.5px solid #ffffffaa;
+    backdrop-filter: blur(6px);
+  ">
+
+    <img src="Foto-profil.jpg" style="
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ffffffc7;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    ">
+
+    <h2 style="margin: 20px 0 8px; font-size: 32px; color: #2a4638;">
+       Ladya Nazwa Anindita 
+    </h2>
+
+    <p style="color:#5e7c6e; font-size: 16px; margin: 0;">
+      Mahasiswa Teknologi Rekayasa Multimedia (TRM)  
+      <br> <b>Politeknik Elektronika Negeri Surabaya</b>
+    </p>
+
+    <p style="
+      margin-top: 16px;
+      color: #496a5a;
+      max-width: 660px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 15px;
+    ">
+  
+  </div>
+
+  <div class="card" style="
+    border-radius: 20px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom:30px;
+  ">
+    <h3>✨ Profil Singkat</h3>
+    <p style="color:#375749; line-height:1.7;">
+      Saya Ladya Nazwa Anindita, mahasiswa Teknologi Rekaya Multimedi (TRM) yang memiliki ketertarikan besar pada 
+      dunia visual kreatif. Saya menyukai proses membuat desain, mengeksplorasi warna, 
+      menciptakan animasi, hingga merancang antarmuka yang nyaman dan estetik.  
+      Saya selalu berusaha mengembangkan kemampuan saya melalui project kampus, 
+      freelance, dan eksperimen pribadi di bidang multimedia.
+    </p>
+  </div>
+
+  <h3 style="color:#2c4d3b; margin-bottom:12px;">🔥 Keahlian Utama</h3>
+
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+  ">
+    <div style="background:#e4fcef; padding:14px; border-radius:14px; font-weight:bold; color:#2c5c43; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">UI/UX Design</div>
+    <div style="background:#ffeddc; padding:14px; border-radius:14px; font-weight:bold; color:#6b4b2c; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">Video Editing</div>
+    <div style="background:#f3e6ff; padding:14px; border-radius:14px; font-weight:bold; color:#4e2d75; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">3D Animation</div>
+    <div style="background:#e6ffe8; padding:14px; border-radius:14px; font-weight:bold; color:#246649; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">Game Asset Creation</div>
+    <div style="background:#fde2f4; padding:14px; border-radius:14px; font-weight:bold; color:#6a3559; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">Graphic Design</div>
+    <div style="background:#e9f2ff; padding:14px; border-radius:14px; font-weight:bold; color:#284e73; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">Web Development</div>
+    <div style="background:#fff5d7; padding:14px; border-radius:14px; font-weight:bold; color:#7b6730; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">Motion Graphics</div>
+    <div style="background:#eaffea; padding:14px; border-radius:14px; font-weight:bold; color:#255e3e; min-width:190px; box-shadow:0 4px 10px rgba(0,0,0,0.06);">Photo Editing</div>
+  </div>
+
+  <div class="card" style="
+    border-radius:20px;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(8px);
+    padding:20px;
+    margin-bottom:30px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.1);
+  ">
+    <h3>🧰 Software & Tools</h3>
+    <ul style="line-height:1.8; color:#335244;">
+      <li>Adobe Photoshop, Illustrator, Premiere Pro, After Effects</li>
+      <li>Figma (UI/UX)</li>
+      <li>Blender (Modeling & Rendering)</li>
+      <li>Unity (Basic Level)</li>
+      <li>Canva & Procreate (Creative Assets)</li>
+      <li>HTML, CSS, JavaScript dasar</li>
+      <li>CapCut Pro & Alight Motion</li>
+    </ul>
+  </div>
+
+  <div class="card" style="
+    border-radius:20px;
+    background:rgba(255,255,255,0.65);
+    backdrop-filter:blur(7px);
+    padding:20px;
+    margin-bottom:30px;
+    box-shadow:0 6px 12px rgba(0,0,0,0.1);
+  ">
+    <h3>🌱 Pengalaman</h3>
+    <ul style="line-height:1.7; color:#375749;">
+      <li>Graphic Designer – TRM Immersive Fiesta</li>
+      <li>Graphic Designer – TRM Expo</li>
+      <li>Graphic Designer – TRM Goes To School</li>
+      <li>Video Editor freelance</li>
+      <li>Photographer & Editor</li>
+    </ul>
+  </div>
+
+  <div class="card" style="
+    border-radius:20px;
+    background:rgba(255,255,255,0.65);
+    backdrop-filter:blur(7px);
+    padding:20px;
+    margin-bottom:30px;
+    box-shadow:0 6px 12px rgba(0,0,0,0.1);
+  ">
+    <h3>🌟 Projek Unggulan</h3>
+    <ul style="line-height:1.8; color:#2e4c3c;">
+      <li>UI Design aplikasi inventory</li>
+      <li>Animasi 3D karakter sederhana (Blender)</li>
+      <li>ciLens: Immersive Science Exploration via Mixed Reality</li>
+      <li>Projection Mapping</li>
+      <li>Branding visual berbagai event TRM</li>
+    </ul>
+  </div>
+
+  <div class="card" style="
+    border-radius:20px;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(7px);
+    padding:20px;
+  ">
+    <h3>🎓 Riwayat Pendidikan</h3>
+    <ul style="line-height:1.7; color:#375749;">
+      <li><b>SMA Muhammadiyah 1 Taman</b> — Jurusan IPA</li>
+      <li><b>D4 Teknologi Rekayasa Multimedia</b> — PENS</li>
+    </ul>
+  </div>
+
+  <div style="
+    margin-top:30px;
+    background:white;
+    padding:20px;
+    border-radius:22px;
+    border:1.5px solid #f5e9d3;
+    box-shadow:0 8px 16px rgba(0,0,0,0.15);
+  ">
+    <h3 style="margin-top:0; color:#2f4f40;">📍 Lokasi Kampus PENS</h3>
+
+    <div style="
+      border-radius:18px;
+      overflow:hidden;
+      border:7px solid #eedfbc;
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    ">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.246283383592!2d112.79318767462288!3d-7.275613972612838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb20794703d1%3A0x1ad1517972ed18e!2sPoliteknik%20Elektronika%20Negeri%20Surabaya%20(PENS)!5e0!3m2!1sid!2sid!4v1731651340000!5m2!1sid!2sid"
+        width="100%"
+        height="300"
+        style="border:0;" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <div style="
+    margin-top:30px;
+    padding:25px;
+    border-radius:22px;
+    background:linear-gradient(135deg, #fefefe, #ffffff);
+    box-shadow:0 10px 20px rgba(0,0,0,0.12);
+  ">
+    <h3 style="margin-top:0; color:#6c3a59;">💬 Hubungi Saya</h3>
+    <div class="contact-box">
+      <label>Nama</label>
+      <input type="text" placeholder="Nama Anda">
+      <label>Email</label>
+      <input type="email" placeholder="Email Anda">
+      <label>Pesan</label>
+      <textarea rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+      <button class="btn-green" style="font-size:15px;">Kirim Pesan</button>
+    </div>
+  </div>
+
+</div>
+
+
+  <div id="page-hash" class="page">
+    <h2>Hash Generator</h2>
+
+    <label for="hash-input">Text Input:</label>
+    <textarea id="hash-input" rows="4"></textarea>
+
+    <label>SHA-256 Hash:</label>
+    <div id="hash-output" class="output"></div>
+  </div>
+
+
+  <div id="page-block" class="page">
+    <h2>Single Block</h2>
+
+    <label for="block-number"># (Nomor Block):</label>
+    <input id="block-number" type="number" min="0" value="0" />
+
+    <label for="block-data">Data:</label>
+    <textarea id="block-data" rows="4"></textarea>
+
+    <label for="block-nonce">Nonce:</label>
+    <input id="block-nonce" type="text" maxlength="9" />
+
+    <label for="block-timestamp">Timestamp:</label>
+    <input id="block-timestamp" type="text" readonly />
+
+    <label>Hash:</label>
+    <div id="block-hash" class="output"></div>
+
+    <button id="btn-mine" class="mine">Mine</button>
+
+    <label for="speed-control">Kecepatan Mining:</label>
+    <select id="speed-control">
+      <option value="1">Normal</option>
+      <option value="10">10x Lebih Cepat</option>
+      <option value="50">50x Lebih Cepat</option>
+    </select>
+
+    <div id="mining-status" class="status"></div>
+  </div>
+
+
+  <div id="page-chain" class="page">
+    <h2>Blockchain</h2>
+    <div id="blockchain" class="chain-container"></div>
+    <div class="chain-controls">
+      <button id="btn-add-block">Add Block</button>
+    </div>
+  </div>
+
+
+  <div id="page-ecc" class="page">
+    <h2>Verifikasi ECC Digital Signature</h2>
+
+    <button id="btn-generate-key">Generate Key Pair</button>
+    <p>Public Key dan Private Key dapat diedit untuk percobaan.</p>
+
+    <label>Public Key:</label>
+    <textarea id="ecc-public" rows="3"></textarea>
+
+    <label>Private Key:</label>
+    <textarea id="ecc-private" rows="3"></textarea>
+
+    <hr />
+
+    <label>Pesan yang akan ditandatangani:</label>
+    <textarea id="ecc-message" rows="3"></textarea>
+
+    <button id="btn-sign">Sign Message</button>
+
+    <label>Hasil Signature (DER hex):</label>
+    <textarea id="ecc-signature" rows="3" readonly></textarea>
+
+    <hr />
+
+    <button id="btn-verify">Verify Signature</button>
+    <div id="ecc-verify-result" class="output"></div>
+  </div>
+
+
+  <div id="page-consensus" class="page">
+
+    <h2>Simulasi Konsensus</h2>
+
+    <div class="wallets">
+
+      <div class="wallet" data-user="A">
+        <h3>User A</h3>
+        <div>Saldo: <span id="saldo-A">100</span></div>
+
+        <label>Penerima:</label>
+        <select id="receiver-A">
+          <option value="B">User B</option>
+          <option value="C">User C</option>
+        </select>
+
+        <label>Jumlah:</label>
+        <input id="amount-A" type="number" min="1" value="10" />
+
+        <button id="send-A">Kirim</button>
+      </div>
+
+      <div class="wallet" data-user="B">
+        <h3>User B</h3>
+        <div>Saldo: <span id="saldo-B">100</span></div>
+
+        <label>Penerima:</label>
+        <select id="receiver-B">
+          <option value="A">User A</option>
+          <option value="C">User C</option>
+        </select>
+
+        <label>Jumlah:</label>
+        <input id="amount-B" type="number" min="1" value="10" />
+
+        <button id="send-B">Kirim</button>
+      </div>
+
+      <div class="wallet" data-user="C">
+        <h3>User C</h3>
+        <div>Saldo: <span id="saldo-C">100</span></div>
+
+        <label>Penerima:</label>
+        <select id="receiver-C">
+          <option value="A">User A</option>
+          <option value="B">User B</option>
+        </select>
+
+        <label>Jumlah:</label>
+        <input id="amount-C" type="number" min="1" value="10" />
+
+        <button id="send-C">Kirim</button>
+      </div>
+
+    </div>
+
+    <div style="margin-top: 12px">
+      <label>Mempool (pending transactions):</label>
+      <textarea id="mempool" rows="3"></textarea>
+    </div>
+
+    <div style="margin-top: 12px">
+      <button id="btn-mine-all">Mine Semua Transaksi</button>
+      <button id="btn-verify-consensus">Verify</button>
+      <button id="btn-consensus">Consensus</button>
+    </div>
+
+    <h3 style="margin-top: 20px">Blockchain Tiap User</h3>
+
+    <div id="chains">
+      <h4>Database User A</h4>
+      <div id="chain-A" class="chain-row"></div>
+
+      <h4>Database User B</h4>
+      <div id="chain-B" class="chain-row"></div>
+
+      <h4>Database User C</h4>
+      <div id="chain-C" class="chain-row"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <img src="logo-pens.png" class="footer-logo" alt="Logo PENS">
+
+      <div>
+        <p><b>Politeknik Elektronika Negeri Surabaya (PENS)</b></p>
+        <p>Email : <a href="mailto:ladyanazwa@gmail.com" style="color:white;">ladyanazwa@gmail.com</a></p>
+        <p>Instagram :
+          <a href="https://www.instagram.com/ldynazwa/" target="_blank" style="color:white;">
+            https://www.instagram.com/ldynazwa/
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+  <script src="app4.js"></script>
+</body>
+</html>
